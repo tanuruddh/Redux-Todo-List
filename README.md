@@ -15,13 +15,13 @@ To run this app locally, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/react-redux-todo-app.git
+git clone https://github.com/tanuruddh/Redux-Todo-List
 ```
 
 2. Install dependencies:
 
 ```bash
-cd react-redux-todo-app
+cd Redux-Todo-List
 npm install
 ```
 
@@ -55,6 +55,3 @@ The project is structured as follows:
 - React
 - Redux
 - react-redux
-
-
-[Todo App redux.webm](https://github.com/umar8637/todoApp-redux-react/assets/114384219/c8efbd52-157b-4312-895d-485a93b05410)
