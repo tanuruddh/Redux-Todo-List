@@ -97,6 +97,7 @@ export default function Login() {
                 <i className="fa-solid fa-lock"></i>
                 <input className="login-input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
               </div>
+              <p>Password should be more than 8 words</p>
             </div>
             <div className="btn-box">
               <button type="button" id="login-button" className={sign !== "signin" ? "disable" : ""} onClick={(e) => signinBtn(e)}>Sign In</button>
