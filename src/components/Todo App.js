@@ -37,13 +37,15 @@ function App() {
 
   useEffect(function () {
     const token = JSON.parse(localStorage.getItem("token"))
+    console.log(token);
     if (!token) navigate('/Redux-Todo-List/login')
     async function getDATA() {
 
       try {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-        const res = await axios.get('https://todo-node.up.railway.app/api/v1/todos');
-        dispatch(setToDos(res.data.data))
+        const res = await axios.get('https://node-todo-server.onrender.com/api/v1/todos');
+        console.log(res);
+        dispatch(setToDos(res.data.data || []))
       } catch (error) {
         console.log(error)
       }

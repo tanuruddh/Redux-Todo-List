@@ -31,7 +31,7 @@ export default function Login() {
     }
     try {
       setLoadings(true);
-      const res = await axios.post('https://todo-node.up.railway.app/api/v1/users/login', {
+      const res = await axios.post('https://node-todo-server.onrender.com/api/v1/users/login', {
         email: email,
         password: password
       })
@@ -57,7 +57,7 @@ export default function Login() {
     }
     try {
       setLoadings(true);
-      const res = await axios.post('https://todo-node.up.railway.app/api/v1/users/signup', {
+      const res = await axios.post('https://node-todo-server.onrender.com/api/v1/users/signup', {
         name: name,
         email: email,
         password: password,

@@ -5,7 +5,7 @@ async function getTodo() {
   try {
     const token = JSON.parse(localStorage.getItem("token"))
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-    const res = await axios.get('https://todo-node.up.railway.app/api/v1/todos');
+    const res = await axios.get('https://node-todo-server.onrender.com/api/v1/todos');
     return res.data.data
   } catch (error) {
     console.log(error)
@@ -23,7 +23,7 @@ async function addToServer(todo) {
   try {
     const token = JSON.parse(localStorage.getItem("token"))
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-    await axios.post('https://todo-node.up.railway.app/api/v1/todos', { heading: todo, description: "Nothing" });
+    await axios.post('https://node-todo-server.onrender.com/api/v1/todos', { heading: todo, description: "Nothing" });
   } catch (error) {
     console.log(error)
   }
@@ -32,7 +32,7 @@ async function editToServer(text, id) {
   try {
     const token = JSON.parse(localStorage.getItem("token"))
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-    await axios.patch(`https://todo-node.up.railway.app/api/v1/todos/${id}`, { heading: text });
+    await axios.patch(`https://node-todo-server.onrender.com/api/v1/todos/${id}`, { heading: text });
   } catch (error) {
     console.log(error)
   }
@@ -41,7 +41,7 @@ async function deleteToServer(id) {
   try {
     const token = JSON.parse(localStorage.getItem("token"))
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-    await axios.delete(`https://todo-node.up.railway.app/api/v1/todos/${id}`);
+    await axios.delete(`https://node-todo-server.onrender.com/api/v1/todos/${id}`);
   } catch (error) {
     console.log(error)
   }
